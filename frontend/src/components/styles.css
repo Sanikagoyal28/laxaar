@@ -115,7 +115,7 @@ body {
 }
 
 form {
-    padding-left: 1.6vw;
+    padding-left: 24px;
 }
 
 #titleInput {
@@ -196,4 +196,203 @@ form {
     color: black;
     font-family: 'Montserrat';
     font-style: normal;
+}
+@media(max-width:1200px){
+    #Dialog{
+        width:40vw;
+    }
+    #titleInput, #descInput{
+        width:20vw;
+    }
+    #addNew{
+        width:10vw;
+    }
+    #dialogDlt{
+        width:32vw;
+    }
+}
+
+@media(max-width:1000px){
+    .background{
+        width:80vw;
+    }
+    .Notes{
+        width:28vw;
+    }
+    .add{
+        width:12vw;
+    }
+    .button1, .button2{
+        width:8vw;
+    }
+    .buttonFlex{
+        margin-left: 11vw;
+    }
+    #Dialog{
+        width:46vw;
+    }
+    #titleInput, #descInput{
+        width:22vw;
+    }
+    #dialogDlt{
+        width:34vw;
+    }
+}
+
+@media(max-width:800px){
+    .background{
+        width:90vw;
+    }
+    .Notes{
+        width:36vw;
+    }
+    .add{
+        width:14vw;
+    }
+    .button1, .button2{
+        width:10vw;
+    }
+    .buttonFlex{
+        margin-left: 14vw;
+    }
+    #Dialog{
+        width:56vw;
+    }
+    #titleInput, #descInput{
+        width:28vw;
+    }
+    #addNew{
+        width:12vw;
+    }
+    #dialogDlt{
+        width:42vw;
+    }
+}
+
+@media(max-width:650px){
+    .background{
+        width:96vw;
+    }
+    .Notes{
+        width:40vw;
+    }
+    .button1, .button2{
+        width:10vw;
+        margin-left: 0.8vw;
+    }
+    .buttonFlex{
+        margin-left: 14.5vw;
+    }
+    #Dialog{
+        width:58vw;
+    }
+    #titleInput, #descInput{
+        width:28vw;
+    }
+    #addNew{
+        width:12vw;
+    }
+    .add{
+        width:18vw;
+    }
+    #dialogDlt{
+        width:44vw;
+    }
+}
+
+@media(max-width:600px){
+    .Notes{
+        width:60vw;
+    }
+    .button1, .button2{
+        width:12vw;
+    }
+    .buttonFlex{
+        margin-left: 29.5vw;
+    }
+    .add{
+        width: 20vw;
+    }
+    #Dialog{
+        width:68vw;
+    }
+    #titleInput, #descInput{
+        width:34vw;
+    }
+    #addNew{
+        width:15vw;
+    }
+    #dialogDlt{
+        width:50vw;
+    }
+}
+
+@media(max-width:510px){
+    .Notes{
+        width:72vw;
+    }
+    .button1, .button2{
+        width:15vw;
+    }
+    .buttonFlex{
+        margin-left: 35vw;
+    }
+    .add{
+        width: 24vw;
+    }
+    #Dialog{
+        width:76vw;
+    }
+    #titleInput, #descInput{
+        width:36vw;
+    }
+    #addNew{
+        width:18vw;
+    }
+    #dialogDlt{
+        width:54vw;
+    }
+}
+@media(max-width:450px){
+    #Dialog{
+        width:82vw;
+    }
+    #dialogDlt{
+        width:60vw;
+    }
+}
+@media(max-width:400px){
+    .Notes{
+        width:76vw;
+    }
+    .button1, .button2{
+        width:18vw;
+    }
+    .buttonFlex{
+        margin-left: 32vw;
+    }
+    .add{
+        width: 28vw;
+    }
+    #Dialog{
+        width:92vw;
+    }
+    #dialogDlt{
+        width:66vw;
+    }
+    #addNew{
+        width:24vw;
+    }
+}
+
+@media(max-width:360px){
+    #Dialog{
+        width:100vw;
+    }
+    #titleInput, #descInput{
+        width:30vw;
+    }
+    #dialogDlt{
+        width:75vw;
+    }
 }

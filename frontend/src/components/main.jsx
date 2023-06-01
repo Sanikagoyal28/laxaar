@@ -97,9 +97,9 @@ function Main() {
                 <DialogTitle>Add New Note</DialogTitle>
                 <form onSubmit={handleAdd} >
                     <pre>
-                        <label for="title">Title:           </label>
+                        <label for="title" className="label">Title:                   </label>
                         <input type="text" id="titleInput" placeholder="" value={title} onChange={(e) => setTitle(e.target.value)} /><br />
-                        <label for="desc">Description:     </label>
+                        <label for="desc" className="label">Description:     </label>
                         <textarea id="descInput" rows={4} placeholder="" value={desc} onChange={(e) => setDesc(e.target.value)} required={title.length < 10 ? true : false} /><br />
                     </pre>
                     <button type="submit" id="addNew">Add</button>
