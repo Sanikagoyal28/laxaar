@@ -107,7 +107,7 @@ function Main() {
                         <label for="desc" className="label">Description:     </label>
                         <textarea id="descInput" rows={4} maxLength={120} placeholder="Type something here" value={desc} onChange={(e) => setDesc(e.target.value)} required={title.length < 10 ? true : false} /><br />
                     </pre>
-                    <p className="count">{count}/100</p>
+                    <p className="count">{count}/120</p>
                     <button type="submit" id="addNew">Add</button>
                 </form>
             </div>
