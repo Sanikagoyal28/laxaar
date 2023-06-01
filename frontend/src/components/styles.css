@@ -181,9 +181,10 @@ pre{
     margin-bottom: 0;
 }
 .count{
-    width: 93%;
+    /* width: 90%; */
     margin:0;
-    text-align: right;
+    /* text-align: right; */
+    margin-left:24vw;
     font-size: 0.8rem;
     color:#737373;
 }
@@ -214,12 +215,18 @@ pre{
     font-family: 'Montserrat';
     font-style: normal;
 }
+
+@media(max-width:1300px){
+    .count{
+        margin-left: 25vw;
+    }
+}
 @media(max-width:1200px){
     #Dialog{
         width:40vw;
     }
     #titleInput, #descInput{
-        width:20vw;
+        width:22vw;
     }
     #addNew{
         width:10vw;
@@ -227,6 +234,15 @@ pre{
     #dialogDlt{
         width:32vw;
     }
+    .count{
+        margin-left: 29vw;
+    }
+}
+
+@media(max-width:1100px){
+    .count{
+        margin-left: 29.5vw;
+    } 
 }
 
 @media(max-width:1000px){
@@ -249,10 +265,19 @@ pre{
         width:46vw;
     }
     #titleInput, #descInput{
-        width:22vw;
+        width:24vw;
     }
     #dialogDlt{
         width:34vw;
+    }
+    .count{
+        margin-left: 32vw;
+    }
+}
+
+@media(max-width:900px){
+    .count{
+        margin-left: 33.5vw;
     }
 }
 
@@ -283,6 +308,9 @@ pre{
     }
     #dialogDlt{
         width:42vw;
+    }
+    .count{
+        margin-left: 39vw;
     }
 }
 
@@ -315,6 +343,9 @@ pre{
     #dialogDlt{
         width:44vw;
     }
+    .count{
+        margin-left: 41vw;
+    }
 }
 
 @media(max-width:600px){
@@ -341,6 +372,9 @@ pre{
     }
     #dialogDlt{
         width:50vw;
+    }
+    .count{
+        margin-left: 48vw;
     }
 }
 
@@ -369,6 +403,9 @@ pre{
     #dialogDlt{
         width:54vw;
     }
+    .count{
+        margin-left: 53vw;
+    }
 }
 @media(max-width:450px){
     #Dialog{
@@ -376,6 +413,9 @@ pre{
     }
     #dialogDlt{
         width:60vw;
+    }
+    .count{
+        margin-left: 55vw;
     }
 }
 @media(max-width:400px){
@@ -400,6 +440,9 @@ pre{
     #addNew{
         width:24vw;
     }
+    .count{
+        margin-left: 58vw;
+    }
 }
 
 @media(max-width:360px){
@@ -411,5 +454,8 @@ pre{
     }
     #dialogDlt{
         width:75vw;
+    }
+    .count{
+        margin-left: 60vw;
     }
 }

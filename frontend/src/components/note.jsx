@@ -42,7 +42,7 @@ function Note(props) {
                         "description": desc
                     }
                     dispatch(editNote(note))
-                    console.log("yes")
+                    // console.log("yes")
                 }
                 if (res.payload.status === 400) {
                     toast.error(res.payload.data.msg, {
@@ -178,7 +178,7 @@ function Note(props) {
                         <label for="title" className="label">Title:                   </label>
                         <input type="text" id="titleInput" placeholder="" value={title} onChange={(e) => setTitle(e.target.value)} /><br />
                         <label for="desc" className="label">Description:     </label>
-                        <textarea id="descInput" rows={4} placeholder="" maxLength={100} value={desc} onChange={(e) => setDesc(e.target.value)} required={title.length < 10 ? true : false} /><br />
+                        <textarea id="descInput" rows={4} placeholder="" maxLength={120} value={desc} onChange={(e) => setDesc(e.target.value)} required={title.length < 10 ? true : false} /><br />
                     </pre>
                     <p className="count">{count}/100</p>
                     <button type="submit" id="addNew">Edit</button>

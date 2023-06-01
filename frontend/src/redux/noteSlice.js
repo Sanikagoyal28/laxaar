@@ -10,7 +10,7 @@ const initialState = {
 }
 
 const AddNoteThunk = createAsyncThunk("add_notes", async (data) => {
-    return await axios.post("http://localhost:3000/create_note", data)
+    return await Baseurl.post("create_note", data)
         .then((res) => {
             return res
         })
@@ -20,7 +20,7 @@ const AddNoteThunk = createAsyncThunk("add_notes", async (data) => {
 })
 
 const EditNoteThunk = createAsyncThunk("edit_notes", async (data) => {
-    return await axios.post("http://localhost:3000/edit_note", data)
+    return await Baseurl.post("edit_note", data)
         .then((res) => {
             return res
         })
@@ -30,19 +30,17 @@ const EditNoteThunk = createAsyncThunk("edit_notes", async (data) => {
 })
 
 const DltNoteThunk = createAsyncThunk("delete_notes", async (id) => {
-    return await axios.delete(`http://localhost:3000/delete_note/${id}`)
+    return await Baseurl.delete(`delete_note/${id}`)
         .then((res) => {
-            console.log(res)
             return res
         })
         .catch((Err) => {
-            console.log(Err)
             return Err
         })
 })
 
 const GetNoteThunk = createAsyncThunk("all_notes", async () => {
-    return await axios.get("http://localhost:3000/get_note")
+    return await Baseurl.get("get_note")
         .then((res) => {
             return res
         })
@@ -59,10 +57,8 @@ const NoteSlice = createSlice({
             state.notes = state.notes.filter((s) => { return s._id != action.payload.id })
         },
         editNote: (state, action) => {
-            console.log(action)
             const note = state.notes.findIndex((n) => n._id == action.payload._id)
             state.notes[note] = action.payload
-            // state.notes = state.notes.filter(())
         }
     },
     extraReducers: (builder) => {
