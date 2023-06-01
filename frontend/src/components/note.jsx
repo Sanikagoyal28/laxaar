@@ -10,6 +10,9 @@ function Note(props) {
 
     const [open, setOpen] = useState(false)
     const [edit, setEdit] = useState(false)
+    const [count, setCount] = useState(0)
+    const [text, setText] = useState('')
+    const [remaining, setRemaining] = useState('')
     const [editId, setEditId] = useState('')
     const [dltId, setDltId] = useState('')
     const [title, setTitle] = useState('')
@@ -88,7 +91,10 @@ function Note(props) {
     }, [editId])
 
     useEffect(() => {
+        setCount(desc.length)
+    }, [desc])
 
+    useEffect(() => {
         const totalNotes = document.getElementsByClassName("Notes")
         const button1 = document.getElementsByClassName("button1")
         const button2 = document.getElementsByClassName("button2")
@@ -105,6 +111,24 @@ function Note(props) {
             button2[i].style.color = '#' + randomColor
         }
     }, [])
+
+    // var textt = document.getElementsByClassName("desc")
+    // var dots = document.getElementsByClassName("dots")
+
+    // useEffect(() => {
+    //     for (var i = 0; i < textt.length; i++) {
+    //         if (props.desc.length > 120) {
+    //             setText(props.desc.slice(0, 100))
+    //             setRemaining(props.desc.slice(60, props.desc.length))
+    //             console.log(remaining)
+    //             document.getElementsByClassName("dots")[props.index].style.display = "inline"
+    //         }
+    //         else {
+    //             setText(props.desc)
+    //             document.getElementsByClassName("dots")[props.index].style.display = "none"
+    //         }
+    //     }
+    // }, [])
 
     return <>
         <div className="Notes">
@@ -154,8 +178,9 @@ function Note(props) {
                         <label for="title" className="label">Title:                   </label>
                         <input type="text" id="titleInput" placeholder="" value={title} onChange={(e) => setTitle(e.target.value)} /><br />
                         <label for="desc" className="label">Description:     </label>
-                        <textarea id="descInput" rows={4} placeholder="" value={desc} onChange={(e) => setDesc(e.target.value)} required={title.length < 10 ? true : false} /><br />
+                        <textarea id="descInput" rows={4} placeholder="" maxLength={100} value={desc} onChange={(e) => setDesc(e.target.value)} required={title.length < 10 ? true : false} /><br />
                     </pre>
+                    <p className="count">{count}/100</p>
                     <button type="submit" id="addNew">Edit</button>
                 </form>
             </div>

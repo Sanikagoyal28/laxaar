@@ -59,6 +59,7 @@ body {
 
 .Notes {
     width: 24vw;
+    height:220px;
     font-family: 'Montserrat';
     font-style: normal;
     font-size: 1rem;
@@ -74,7 +75,7 @@ body {
     height: 32px;
     font-family: 'Montserrat';
     font-style: normal;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     outline: none;
     border: none;
     border: 1px soild rgb(255, 255, 255, 0.9);
@@ -90,6 +91,7 @@ body {
     margin-bottom: 8px;
     word-wrap: break-word;
     word-break: break-all;
+    margin-bottom: 4px;
 }
 
 .desc {
@@ -97,6 +99,11 @@ body {
     color: rgb(255, 255, 255, 0.8);
     text-transform: capitalize;
     word-wrap: break-word;
+    font-size: 0.95rem;
+    /* display: -webkit-box; */
+    /* -webkit-line-clamp: 4; */
+    text-overflow: ellipsis;
+    margin-top: 0;
 }
 
 .buttonFlex {
@@ -126,7 +133,7 @@ form {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.9rem;
     height: 32px;
     width: 18vw;
     border: 1px solid #303030;
@@ -149,7 +156,7 @@ form {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.9rem;
     width: 18vw;
     border: 1px solid #303030;
     padding: 4px 8px;
@@ -169,6 +176,16 @@ form {
     background-color: #218378;
     cursor: pointer;
     margin-top: 16px;
+}
+pre{
+    margin-bottom: 0;
+}
+.count{
+    width: 93%;
+    margin:0;
+    text-align: right;
+    font-size: 0.8rem;
+    color:#737373;
 }
 
 /* delete dialog */

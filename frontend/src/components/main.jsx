@@ -13,6 +13,7 @@ function Main() {
 
     const dispatch = useDispatch();
     const [title, setTitle] = useState('')
+    const [count, setCount] = useState(0)
     const [desc, setDesc] = useState('')
     const [open, setOpen] = useState(false)
     const loading = useSelector((r) => r.loading)
@@ -26,6 +27,10 @@ function Main() {
     useEffect(() => {
         setNote(notes)
     }, [notes])
+
+    useEffect(() => {
+        setCount(desc.length)
+    }, [desc])
 
     function handleAdd(e) {
         e.preventDefault()
@@ -80,8 +85,8 @@ function Main() {
             </div>
 
             <div className="noteFlex">
-                {note.length > 0 ? note.map((n) => {
-                    return <Note title={n.title} desc={n.description} id={n._id} />
+                {note.length > 0 ? note.map((n, index) => {
+                    return <Note title={n.title} desc={n.description} id={n._id} index={index} />
                 }) : null}
             </div>
         </div>
@@ -98,10 +103,11 @@ function Main() {
                 <form onSubmit={handleAdd} >
                     <pre>
                         <label for="title" className="label">Title:                   </label>
-                        <input type="text" id="titleInput" placeholder="" value={title} onChange={(e) => setTitle(e.target.value)} /><br />
+                        <input type="text" id="titleInput" placeholder="Enter title of note" value={title} onChange={(e) => setTitle(e.target.value)} /><br />
                         <label for="desc" className="label">Description:     </label>
-                        <textarea id="descInput" rows={4} placeholder="" value={desc} onChange={(e) => setDesc(e.target.value)} required={title.length < 10 ? true : false} /><br />
+                        <textarea id="descInput" rows={4} maxLength={100} placeholder="Type something here" value={desc} onChange={(e) => setDesc(e.target.value)} required={title.length < 10 ? true : false} /><br />
                     </pre>
+                    <p className="count">{count}/100</p>
                     <button type="submit" id="addNew">Add</button>
                 </form>
             </div>
